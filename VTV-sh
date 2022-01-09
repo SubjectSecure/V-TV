@@ -1,0 +1,42 @@
+/bin/echo "20 seconds ctrl + c to abort" 
+/bin/echo "$i"
+/bin/sleep 20
+/bin/echo "Shutdown at 17:00"
+/bin/sleep 10
+sudo shutdown 17:00
+cvlc http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3&
+feh -F /home/pi/Downloads/loading.jpg&
+tickr&
+for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+do
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+cd /home/pi/Videos
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1))
+cd /home/pi/Documents/Fotoserie
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+killall vlc
+cd /home/pi/Downloads/films
+omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1))
+cvlc http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3&
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+cd /home/pi/Documents/Fotoserie
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+#export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
+#export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Corona.mp4
+#export DISPLAY=:0 && /usr/bin/omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Vacature.mp4
+
+done
