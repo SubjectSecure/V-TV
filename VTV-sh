@@ -32,8 +32,8 @@ omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
+#omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Corona.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Vacature.mp4
+#omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Vacature.mp4
 
 done
