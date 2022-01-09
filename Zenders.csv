@@ -1,100 +1,100 @@
-﻿Sleutel;Naam;Link
-1;NPO Radio 1;http://icecast.omroep.nl/radio1-bb-mp3
-2;NPO Radio 2;http://icecast.omroep.nl/radio2-bb-mp3
-3;NPO 3 FM;http://icecast.omroep.nl/3fm-bb-mp3
-4;NPO Radio 4;http://icecast.omroep.nl/radio4-bb-mp3
-5;NPO Radio 5;http://icecast.omroep.nl/radio5-bb-mp3
-6;NPO FunX NL;http://icecast.omroep.nl/funx-bb-mp3
-7;NPO Sterren nl;http://icecast.omroep.nl/radio2-sterrennl-mp3
-8;NPO 3FM Alternative;http://icecast.omroep.nl/3fm-alternative-mp3
-9;NPO 3FM KX;http://icecast.omroep.nl/3fm-serioustalent-mp3
-10;NPO Radio 4 Concerten;http://icecast.omroep.nl/radio4-eigentijds-mp3
-11;NPO Radio 2 Soul & Jazz;http://icecast.omroep.nl/radio6-bb-mp3
-12;NPO FunX Amsterdam Arab;http://icecast.omroep.nl/funx-arab-bb-mp3
-13;NPO FunX Fissa;http://icecast.omroep.nl/funx-dance-bb-mp3
-14;NPO FunX Den Haag / Hip Hop;http://icecast.omroep.nl/funx-hiphop-bb-mp3
-15;NPO FunX Utrecht / Latin;http://icecast.omroep.nl/funx-latin-bb-mp3
-16;NPO FunX Rotterdam / Reggae;http://icecast.omroep.nl/funx-reggae-bb-mp3
-17;NPO FunX Slow Jamz;http://icecast.omroep.nl/funx-slowjamz-bb-mp3
-18;100% NL;http://stream.100p.nl/100pctnl.mp3.m3u
-19;Arrow Classic Rock;https://stream.gal.io/arrow
-20;BNR Nieuwsradio;http://22533.live.streamtheworld.com/BNR_NIEUWSRADIO.mp3
-21;Classicnl;http://www.classicfm.nl/player/classicfm.pls
-22;Efteling Kids Radio;http://ice.cr2.streamzilla.xlcdn.com:8000/sz=efteling=hdstream
-23;GrootnieuwsRadio;http://media02.streampartner.nl:8000/live.m3u
-24;GLXY home of rap;https://mediaserv73.live-streams.nl:18044/stream.m3u
-25;KINK;https://playerservices.streamtheworld.com/pls/KINK.pls
-26;Magic FM;https://stream.magicfm.nl/magicfm
-27;One World Radio;https://21293.live.streamtheworld.com/OWR_INTERNATIONALAAC.aac
-28;Q-Music;https://stream.qmusic.nl/qmusic/mp3
-29;Radio 10;http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3
-30;Radio 538;http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3
-31;Radio Maria;http://87.233.180.73:8000/listen.pls
-32;Radio Veronica;http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3
-33;Sky Radio;http://www.skyradio.nl/player/skyradio.pls
-34;Slam!;http://stream.slam.nl/slam.m3u
-35;SubLime;https://20863.live.streamtheworld.com/SUBLIME.mp3
-36;Sunlite;https://25533.live.streamtheworld.com/SUNLITE_MP3.mp3
-37;100% NL Feest;http://stream.radiocorp.nl/web01_mp3
-38;100% NL Liefde;http://stream.radiocorp.nl/web03_mp3
-39;100 %NL Non-stop;http://stream.radiocorp.nl/web02_mp3
-40;100 %NL Nederpop;http://stream.radiocorp.nl/web04_mp3
-41;100 %NL Zomer/Kerst/Songfestival;http://stream.radiocorp.nl/web05_mp3
-42;100 %NL Puur;http://stream.radiocorp.nl/web06_mp3
-43;538 Dance Department;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3
-44;538 Rewind;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR08.mp3
-45;538 Non Stop;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3
-46;538 Hitzone;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR11.mp3
-47;538 Ibiza;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR19.mp3
-48;538 Verruckte Stunden;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR21.mp3
-49;538 Top 50;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR13.mp3
-50;538 Party;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR16.mp3
-51;Arrow Caz;http://stream.arrowcaz.nl/caz128kmp3
-52;Classicnl Mind Radio;http://www.classicfm.nl/player/classicfm-chill-out.pls
-53;Classicnl Opera;http://www.classicfm.nl/player/classicfm-opera.pls
-54;Classicnl Soundtracks;http://www.classicfm.nl/player/classicfm-soundtracks.pls
-55;GrootnieuwsRadio Non-Stop;http://media04.streampartner.nl:8082/live.m3u
-56;KINK DNA Classics;https://21293.live.streamtheworld.com/KINK_DNA.mp3
-57;KINK Distortion;https://21293.live.streamtheworld.com/KINK_DISTORTION.mp3
-58;KINK INDIE;https://21293.live.streamtheworld.com/KINKINDIE.mp3
-59;Radio 10 60's/70's Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR18.mp3
-60;Radio 10 80's Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR20.mp3
-61;Radio 10 90's Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR22.mp3
-62;Radio 10 Disco Classics;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR23.mp3
-63;Radio 10 Love Songs;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR04.mp3
-64;Radio 10 Non-Stop;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR15.mp3
-65;Radio 10 Top 4000;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR24.mp3
-66;Joe (Qmusic);https://stream.joe.nl/joe/mp3
-67;Q-Music Non-Stop;https://stream.qmusic.nl/nonstop/mp3
-68;Q-Music Top 40;https://stream.qmusic.nl/top40/mp3
-69;Q Music Top1000/XMAS/Summer;https://stream.qmusic.nl/thema/mp3
-70;Q Music Nederlandstalig;https://23903.live.streamtheworld.com/QMUSICNL_NEDERLANDSTALIG.mp3
-71;Q Music Foute Uur;https://stream.qmusic.nl/fouteuur/mp3
-72;Radio Veronica - Top 1000 Allertijden;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3
-73;Radio Veronica - Non-Stop;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3
-74;Radio Veronica - Alternative;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3
-75;Radio Veronica - Rockradio;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3
-76;Sky Radio Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3
-77;Sky Radio Lounge;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR07.mp3
-78;Sky Radio Lovesongs;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03.mp3
-79;Sky Radio NonStop @ Work;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR24.mp3
-80;Sky Radio 80's Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR04.mp3
-81;Sky Radio 90's Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR05.mp3
-82;Sky Radio Christmas / Summer;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3
-83;Sky Radio Pop Up;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR28.mp3
-84;Sky Radio Smooth Hits;http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR15.mp3
-85;Slam! Hardstyle;https://stream.slam.nl/web11_mp3
-86;Slam! The Boom Room;https://stream.slam.nl/web12_mp3
-87;Slam! NonStop;https://stream.slam.nl/web10_mp3
-88;Slam! Juize;https://stream.slam.nl/web09_mp3
-89;Slam! MixMarathon;https://stream.slam.nl/web13_mp3
-90;Slam! 40;https://stream.slam.nl/web14_mp3
-91;Slam! Summer;https://stream.slam.nl/web08_mp3
-92;Slam! 00's;https://stream.slam.nl/web15_mp3
-93;Slam! Housuh in de Pauzuh;https://stream.slam.nl/web16_mp3
-94;Sublime Popup;https://21313.live.streamtheworld.com/SUBLIMEPLAYGROUND.mp3
-95;Sublime Funk Disco;https://21293.live.streamtheworld.com/SUBLIME_FUNK_DISCO.mp3
-96;Sublime Soul 1000;https://20133.live.streamtheworld.com/SUBLIMESOUL.mp3
-97;Sublime 500;https://22193.live.streamtheworld.com/SUBLIME500.mp3
-98;Sublime Smooth;https://22673.live.streamtheworld.com/SUBLIMESMOOTH.mp3
-99;Sublime presents Arrow Jazz FM;https://22193.live.streamtheworld.com/SUBLIMEARROWJAZZ.mp3
+Sleutel,Naam,Link
+1,NPO Radio 1,http://icecast.omroep.nl/radio1-bb-mp3
+2,NPO Radio 2,http://icecast.omroep.nl/radio2-bb-mp3
+3,NPO 3 FM,http://icecast.omroep.nl/3fm-bb-mp3
+4,NPO Radio 4,http://icecast.omroep.nl/radio4-bb-mp3
+5,NPO Radio 5,http://icecast.omroep.nl/radio5-bb-mp3
+6,NPO FunX NL,http://icecast.omroep.nl/funx-bb-mp3
+7,NPO Sterren nl,http://icecast.omroep.nl/radio2-sterrennl-mp3
+8,NPO 3FM Alternative,http://icecast.omroep.nl/3fm-alternative-mp3
+9,NPO 3FM KX,http://icecast.omroep.nl/3fm-serioustalent-mp3
+10,NPO Radio 4 Concerten,http://icecast.omroep.nl/radio4-eigentijds-mp3
+11,NPO Radio 2 Soul & Jazz,http://icecast.omroep.nl/radio6-bb-mp3
+12,NPO FunX Amsterdam Arab,http://icecast.omroep.nl/funx-arab-bb-mp3
+13,NPO FunX Fissa,http://icecast.omroep.nl/funx-dance-bb-mp3
+14,NPO FunX Den Haag / Hip Hop,http://icecast.omroep.nl/funx-hiphop-bb-mp3
+15,NPO FunX Utrecht / Latin,http://icecast.omroep.nl/funx-latin-bb-mp3
+16,NPO FunX Rotterdam / Reggae,http://icecast.omroep.nl/funx-reggae-bb-mp3
+17,NPO FunX Slow Jamz,http://icecast.omroep.nl/funx-slowjamz-bb-mp3
+18,100% NL,http://stream.100p.nl/100pctnl.mp3.m3u
+19,Arrow Classic Rock,https://stream.gal.io/arrow
+20,BNR Nieuwsradio,http://22533.live.streamtheworld.com/BNR_NIEUWSRADIO.mp3
+21,Classicnl,http://www.classicfm.nl/player/classicfm.pls
+22,Efteling Kids Radio,http://ice.cr2.streamzilla.xlcdn.com:8000/sz=efteling=hdstream
+23,GrootnieuwsRadio,http://media02.streampartner.nl:8000/live.m3u
+24,GLXY home of rap,https://mediaserv73.live-streams.nl:18044/stream.m3u
+25,KINK,https://playerservices.streamtheworld.com/pls/KINK.pls
+26,Magic FM,https://stream.magicfm.nl/magicfm
+27,One World Radio,https://21293.live.streamtheworld.com/OWR_INTERNATIONALAAC.aac
+28,Q-Music,https://stream.qmusic.nl/qmusic/mp3
+29,Radio 10,http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3
+30,Radio 538,http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3
+31,Radio Maria,http://87.233.180.73:8000/listen.pls
+32,Radio Veronica,http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3
+33,Sky Radio,http://www.skyradio.nl/player/skyradio.pls
+34,Slam!,http://stream.slam.nl/slam.m3u
+35,SubLime,https://20863.live.streamtheworld.com/SUBLIME.mp3
+36,Sunlite,https://25533.live.streamtheworld.com/SUNLITE_MP3.mp3
+37,100% NL Feest,http://stream.radiocorp.nl/web01_mp3
+38,100% NL Liefde,http://stream.radiocorp.nl/web03_mp3
+39,100 %NL Non-stop,http://stream.radiocorp.nl/web02_mp3
+40,100 %NL Nederpop,http://stream.radiocorp.nl/web04_mp3
+41,100 %NL Zomer/Kerst/Songfestival,http://stream.radiocorp.nl/web05_mp3
+42,100 %NL Puur,http://stream.radiocorp.nl/web06_mp3
+43,538 Dance Department,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3
+44,538 Rewind,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR08.mp3
+45,538 Non Stop,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3
+46,538 Hitzone,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR11.mp3
+47,538 Ibiza,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR19.mp3
+48,538 Verruckte Stunden,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR21.mp3
+49,538 Top 50,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR13.mp3
+50,538 Party,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR16.mp3
+51,Arrow Caz,http://stream.arrowcaz.nl/caz128kmp3
+52,Classicnl Mind Radio,http://www.classicfm.nl/player/classicfm-chill-out.pls
+53,Classicnl Opera,http://www.classicfm.nl/player/classicfm-opera.pls
+54,Classicnl Soundtracks,http://www.classicfm.nl/player/classicfm-soundtracks.pls
+55,GrootnieuwsRadio Non-Stop,http://media04.streampartner.nl:8082/live.m3u
+56,KINK DNA Classics,https://21293.live.streamtheworld.com/KINK_DNA.mp3
+57,KINK Distortion,https://21293.live.streamtheworld.com/KINK_DISTORTION.mp3
+58,KINK INDIE,https://21293.live.streamtheworld.com/KINKINDIE.mp3
+59,Radio 10 60's/70's Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR18.mp3
+60,Radio 10 80's Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR20.mp3
+61,Radio 10 90's Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR22.mp3
+62,Radio 10 Disco Classics,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR23.mp3
+63,Radio 10 Love Songs,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR04.mp3
+64,Radio 10 Non-Stop,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR15.mp3
+65,Radio 10 Top 4000,http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR24.mp3
+66,Joe (Qmusic),https://stream.joe.nl/joe/mp3
+67,Q-Music Non-Stop,https://stream.qmusic.nl/nonstop/mp3
+68,Q-Music Top 40,https://stream.qmusic.nl/top40/mp3
+69,Q Music Top1000/XMAS/Summer,https://stream.qmusic.nl/thema/mp3
+70,Q Music Nederlandstalig,https://23903.live.streamtheworld.com/QMUSICNL_NEDERLANDSTALIG.mp3
+71,Q Music Foute Uur,https://stream.qmusic.nl/fouteuur/mp3
+72,Radio Veronica - Top 1000 Allertijden,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR10.mp3
+73,Radio Veronica - Non-Stop,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR09.mp3
+74,Radio Veronica - Alternative,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR12.mp3
+75,Radio Veronica - Rockradio,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR11.mp3
+76,Sky Radio Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3
+77,Sky Radio Lounge,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR07.mp3
+78,Sky Radio Lovesongs,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR03.mp3
+79,Sky Radio NonStop @ Work,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR24.mp3
+80,Sky Radio 80's Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR04.mp3
+81,Sky Radio 90's Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR05.mp3
+82,Sky Radio Christmas / Summer,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3
+83,Sky Radio Pop Up,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR28.mp3
+84,Sky Radio Smooth Hits,http://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR15.mp3
+85,Slam! Hardstyle,https://stream.slam.nl/web11_mp3
+86,Slam! The Boom Room,https://stream.slam.nl/web12_mp3
+87,Slam! NonStop,https://stream.slam.nl/web10_mp3
+88,Slam! Juize,https://stream.slam.nl/web09_mp3
+89,Slam! MixMarathon,https://stream.slam.nl/web13_mp3
+90,Slam! 40,https://stream.slam.nl/web14_mp3
+91,Slam! Summer,https://stream.slam.nl/web08_mp3
+92,Slam! 00's,https://stream.slam.nl/web15_mp3
+93,Slam! Housuh in de Pauzuh,https://stream.slam.nl/web16_mp3
+94,Sublime Popup,https://21313.live.streamtheworld.com/SUBLIMEPLAYGROUND.mp3
+95,Sublime Funk Disco,https://21293.live.streamtheworld.com/SUBLIME_FUNK_DISCO.mp3
+96,Sublime Soul 1000,https://20133.live.streamtheworld.com/SUBLIMESOUL.mp3
+97,Sublime 500,https://22193.live.streamtheworld.com/SUBLIME500.mp3
+98,Sublime Smooth,https://22673.live.streamtheworld.com/SUBLIMESMOOTH.mp3
+99,Sublime presents Arrow Jazz FM,https://22193.live.streamtheworld.com/SUBLIMEARROWJAZZ.mp3
