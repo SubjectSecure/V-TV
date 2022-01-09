@@ -1,8 +1,6 @@
 echo "20 seconds ctrl + c to abort" 
-echo "$i"
-sleep 20
 echo "Shutdown at 17:00"
-sleep 10
+sleep 20
 sudo shutdown 17:00
 cvlc http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3&
 feh -F /home/pi/Downloads/loading.jpg&
