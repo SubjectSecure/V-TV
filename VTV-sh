@@ -28,6 +28,8 @@ mv *.mp4 /home/pi/instaloader/nos/mp4
 mv *.jpg /home/pi/instaloader/nos/jpg
 mv *.txt /home/pi/instaloader/nos/jpg/caption
 for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
+cd /home/pi/instaloader/nos/jpg
+feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 cd /home/pi/Videos
 omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1))
 cd /home/pi/Documents/Fotoserie
@@ -43,6 +45,8 @@ omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 cd /home/pi/instaloader/nos/mp4
 #speel instagram videos af (zonder geluid)
 for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
+cd /home/pi/instaloader/nos/jpg
+feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 killall vlc
 cd /home/pi/Downloads/films
 omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1))
