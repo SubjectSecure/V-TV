@@ -14,20 +14,20 @@ mkdir /home/pi/instaloader
 while true; do
 cd /home/pi/instaloader
 #instaloader download data
-instaloader --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
+instaloader --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --quiet --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--&
 cd /home/pi/instaloader/nos
 mkdir /home/pi/instaloader/nos/mp4
 mkdir /home/pi/instaloader/nos/jpg
 mkdir /home/pi/instaloader/nos/jpg/captions
-mv *.mp4 /home/pi/instaloader/nos/mp4
-mv *.jpg /home/pi/instaloader/nos/jpg
-mv *.txt /home/pi/instaloader/nos/jpg/captions
-cd /home/pi/instaloader/nos/mp4
-#speel instagram videos af (zonder geluid)
-for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+cd /home/pi/instaloader/nos/mp4
+#speel instagram videos af (zonder geluid)
+mv *.mp4 /home/pi/instaloader/nos/mp4
+mv *.jpg /home/pi/instaloader/nos/jpg
+mv *.txt /home/pi/instaloader/nos/jpg/caption
+for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
 cd /home/pi/Videos
 omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1))
 cd /home/pi/Documents/Fotoserie
