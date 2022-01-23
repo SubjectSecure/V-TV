@@ -28,6 +28,8 @@ mv *.mp4 /home/pi/instaloader/nos/mp4
 mv *.jpg /home/pi/instaloader/nos/jpg
 mv *.txt /home/pi/instaloader/nos/jpg/caption
 for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
+cd /home/pi/instaloader/nos/jpg/captions
+for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done
 cd /home/pi/instaloader/nos/jpg
 feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 cd /home/pi/Videos
