@@ -5,33 +5,33 @@ sudo shutdown 17:00
 cvlc http://icecast.omroep.nl/radio2-bb-mp3&
 feh -F /home/pi/Downloads/loading.jpg&
 #instaloader directory leeggooien
-rm -R /home/pi/instaloader
-python3 /home/pi/datumcheck.py > datum.txt
-DATUM=$(cat /home/pi/datum.txt)
-echo "${DATUM}"
+#rm -R /home/pi/instaloader
+#python3 /home/pi/datumcheck.py > datum.txt
+#DATUM=$(cat /home/pi/datum.txt)
+#echo "${DATUM}"
 tickr&
-mkdir /home/pi/instaloader
+#mkdir /home/pi/instaloader
 while true; do
-cd /home/pi/instaloader
+#cd /home/pi/instaloader
 #instaloader download data
-instaloader --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --quiet --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--&
-cd /home/pi/instaloader/nos
-mkdir /home/pi/instaloader/nos/mp4
-mkdir /home/pi/instaloader/nos/jpg
-mkdir /home/pi/instaloader/nos/jpg/captions
+#instaloader --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --quiet --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--&
+#cd /home/pi/instaloader/nos
+#mkdir /home/pi/instaloader/nos/mp4
+#mkdir /home/pi/instaloader/nos/jpg
+#mkdir /home/pi/instaloader/nos/jpg/captions
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
-cd /home/pi/instaloader/nos/mp4
+#cd /home/pi/instaloader/nos/mp4
 #speel instagram videos af (zonder geluid)
-mv *.mp4 /home/pi/instaloader/nos/mp4
-mv *.jpg /home/pi/instaloader/nos/jpg
-mv *.txt /home/pi/instaloader/nos/jpg/caption
-for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
-cd /home/pi/instaloader/nos/jpg/captions
-for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done
-cd /home/pi/instaloader/nos/jpg
-feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
+#mv *.mp4 /home/pi/instaloader/nos/mp4
+#mv *.jpg /home/pi/instaloader/nos/jpg
+#mv *.txt /home/pi/instaloader/nos/jpg/caption
+#for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
+#cd /home/pi/instaloader/nos/jpg/captions
+#for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done
+#cd /home/pi/instaloader/nos/jpg
+#feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 cd /home/pi/Videos
 omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1))
 cd /home/pi/Documents/Fotoserie
@@ -46,9 +46,9 @@ omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 cd /home/pi/instaloader/nos/mp4
 #speel instagram videos af (zonder geluid)
-for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
-cd /home/pi/instaloader/nos/jpg
-feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
+#for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
+#cd /home/pi/instaloader/nos/jpg
+#feh -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 killall vlc
 cd /home/pi/Downloads/films
 omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1))
