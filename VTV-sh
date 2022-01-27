@@ -14,13 +14,20 @@ mkdir /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
 mv /home/pi/instaloader/nos/*.txt /home/pi/instaloader/nos/jpg
-mkdir /home/pi/instaloader/rtl
-mkdir /home/pi/instaloader/rtl/mp4
-mkdir /home/pi/instaloader/rtl/jpg
-mkdir /home/pi/instaloader/rtl/jpg/captions
-mv /home/pi/instaloader/rtl/*.mp4 /home/pi/instaloader/rtl/mp4
-mv /home/pi/instaloader/rtl/*.jpg /home/pi/instaloader/rtl/jpg
-mv /home/pi/instaloader/rtl/*.txt /home/pi/instaloader/rtl/jpg
+mkdir /home/pi/instaloader/nosst
+mkdir /home/pi/instaloader/nosst/mp4
+mkdir /home/pi/instaloader/nosst/jpg
+mkdir /home/pi/instaloader/nosst/jpg/captions
+mv /home/pi/instaloader/nosst/*.mp4 /home/pi/instaloader/nosst/mp4
+mv /home/pi/instaloader/nosst/*.jpg /home/pi/instaloader/nosst/jpg
+mv /home/pi/instaloader/nosst/*.txt /home/pi/instaloader/nosst/jpg
+mkdir /home/pi/instaloader/nossp
+mkdir /home/pi/instaloader/nossp/mp4
+mkdir /home/pi/instaloader/nossp/jpg
+mkdir /home/pi/instaloader/nossp/jpg/captions
+mv /home/pi/instaloader/nossp/*.mp4 /home/pi/instaloader/nossp/mp4
+mv /home/pi/instaloader/nossp/*.jpg /home/pi/instaloader/nossp/jpg
+mv /home/pi/instaloader/nossp/*.txt /home/pi/instaloader/nossp/jpg
 #FOR EVERY JPG A TXT NOS BEGIN
 (cd /home/pi/instaloader/nos/jpg ; for f in *.jpg; do
 FILENAMEwoEXT="${f%%.*}"
@@ -31,8 +38,8 @@ FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
 cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
 done)
 #FOR EVERY JPG A TXT NOS END
-#FOR EVERY JPG A TXT RTL BEGIN
-(cd /home/pi/instaloader/rtl/jpg ; for f in *.jpg; do
+#FOR EVERY JPG A TXT NOSST BEGIN
+(cd /home/pi/instaloader/nosst/jpg ; for f in *.jpg; do
 FILENAMEwoEXT="${f%%.*}"
 echo "${FILENAMEwoEXT}"
 echo "hierna file::-2"
@@ -40,17 +47,32 @@ echo "${FILENAMEwoEXT::-2}"
 FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
 cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
 done)
-#FOR EVERY JPG A TXT RTL END
+#FOR EVERY JPG A TXT NOSST END
+#FOR EVERY JPG A TXT NOSSP BEGIN
+(cd /home/pi/instaloader/nossp/jpg ; for f in *.jpg; do
+FILENAMEwoEXT="${f%%.*}"
+echo "${FILENAMEwoEXT}"
+echo "hierna file::-2"
+echo "${FILENAMEwoEXT::-2}"
+FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
+cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
+done)
+#FOR EVERY JPG A TXT NOSSP END
 #RENAMING TXT FILES NOS BEGIN
 (cd /home/pi/instaloader/nos/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 (cd /home/pi/instaloader/nos/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOS END
-#RENAMING TXT FILES RTL BEGIN
-(cd /home/pi/instaloader/rtl/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-(cd /home/pi/instaloader/rtl/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-#RENAMING TXT FILES RTL END
+#RENAMING TXT FILES NOSST BEGIN
+(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+#RENAMING TXT FILES NOSST END
+#RENAMING TXT FILES NOSSP BEGIN
+(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+#RENAMING TXT FILES NOSSP END
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
-mv /home/pi/instaloader/rtl/jpg/*.txt /home/pi/instaloader/rtl/jpg/captions
+mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
+mv /home/pi/instaloader/nossp/jpg/*.txt /home/pi/instaloader/nossp/jpg/captions
 #GENERATE DATE FOR INSTALOADER BEGIN
 python3 /home/pi/datumcheck.py > /home/pi/datum.txt
 DATUM=$(cat /home/pi/datum.txt)
@@ -62,13 +84,16 @@ while true; do
 #cd /home/pi/instaloader
 #INSTALOADER DOWNLOAD DATA
 instaloader --dirname-pattern=/home/pi/instaloader/nos --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
-instaloader --dirname-pattern=/home/pi/instaloader/rtl --post-filter="date_utc >= ${DATUM}" rtlnieuws --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
+instaloader --dirname-pattern=/home/pi/instaloader/nosstories --post-filter="date_utc >= ${DATUM}" nosstories --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
+instaloader --dirname-pattern=/home/pi/instaloader/nossport --post-filter="date_utc >= ${DATUM}" nossport --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
-mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/rtl/mp4
-mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/rtl/jpg
+mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nosst/mp4
+mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nosst/jpg
+mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nossp/mp4
+mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nossp/jpg
 #FOR EVERY JPG A TXT NOS BEGIN
 (cd /home/pi/instaloader/nos/jpg ; for f in *.jpg; do
 FILENAMEwoEXT="${f%%.*}"
@@ -79,8 +104,8 @@ FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
 cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
 done)
 #FOR EVERY JPG A TXT NOS END
-#FOR EVERY JPG A TXT RTL BEGIN
-(cd /home/pi/instaloader/rtl/jpg ; for f in *.jpg; do
+#FOR EVERY JPG A TXT NOSST BEGIN
+(cd /home/pi/instaloader/nosst/jpg ; for f in *.jpg; do
 FILENAMEwoEXT="${f%%.*}"
 echo "${FILENAMEwoEXT}"
 echo "hierna file::-2"
@@ -88,26 +113,45 @@ echo "${FILENAMEwoEXT::-2}"
 FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
 cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
 done)
-#FOR EVERY JPG A TXT RTL END
+#FOR EVERY JPG A TXT NOSST END
+#FOR EVERY JPG A TXT NOSSP BEGIN
+(cd /home/pi/instaloader/nossp/jpg ; for f in *.jpg; do
+FILENAMEwoEXT="${f%%.*}"
+echo "${FILENAMEwoEXT}"
+echo "hierna file::-2"
+echo "${FILENAMEwoEXT::-2}"
+FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
+cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
+done)
+#FOR EVERY JPG A TXT NOSSP END
 #RENAMING TXT FILES NOS BEGIN
 (cd /home/pi/instaloader/nos/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 (cd /home/pi/instaloader/nos/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOS END
-#RENAMING TXT FILES RTL BEGIN
-(cd /home/pi/instaloader/rtl/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-(cd /home/pi/instaloader/rtl/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-#RENAMING TXT FILES RTL END
+#RENAMING TXT FILES NOSST BEGIN
+(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+#RENAMING TXT FILES NOSST END
+#RENAMING TXT FILES NOSSP BEGIN
+(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+#RENAMING TXT FILES NOSSP END
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
-mv /home/pi/instaloader/rtl/jpg/*.txt /home/pi/instaloader/rtl/jpg/captions
-#INSTALOADER VIDEO EN JPG RTL AFSPELEN BEGIN
-(cd /home/pi/instaloader/rtl/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
-feh /home/pi/instaloader/rtl/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
-#INSTALOADER VIDEO EN JPG RTL AFSPELEN END
+mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
+mv /home/pi/instaloader/nossp/jpg/*.txt /home/pi/instaloader/nossp/jpg/captions
+#INSTALOADER VIDEO EN JPG NOSST AFSPELEN BEGIN
+(cd /home/pi/instaloader/nosst/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
+feh /home/pi/instaloader/nosst/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
+#INSTALOADER VIDEO EN JPG NOSST AFSPELEN END
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 (cd /home/pi/Videos; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 (cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+#INSTALOADER VIDEO EN JPG NOSSP AFSPELEN BEGIN
+(cd /home/pi/instaloader/nossp/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
+feh /home/pi/instaloader/nossp/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
+#INSTALOADER VIDEO EN JPG NOSSP AFSPELEN END
 (cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 (cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
