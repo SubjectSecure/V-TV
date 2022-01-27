@@ -57,8 +57,7 @@ done)
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 #INSTALOADER VIDEO EN JPG AFSPELEN BEGIN
 (cd /home/pi/instaloader/nos/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
-feh /home/pi/instaloader/nos/jpg -F -D 15 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions&
-xdotool search --onlyvisible --class tickr windowactivate %@
+feh /home/pi/instaloader/nos/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG AFSPELEN END
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 (cd /home/pi/Videos; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1)))
