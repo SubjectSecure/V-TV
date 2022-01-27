@@ -67,8 +67,8 @@ done)
 (cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOSST END
 #RENAMING TXT FILES NOSSP BEGIN
-(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nossp/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nossp/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOSSP END
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
@@ -84,8 +84,8 @@ while true; do
 #cd /home/pi/instaloader
 #INSTALOADER DOWNLOAD DATA
 instaloader --dirname-pattern=/home/pi/instaloader/nos --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
-instaloader --dirname-pattern=/home/pi/instaloader/nosstories --post-filter="date_utc >= ${DATUM}" nosstories --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
-instaloader --dirname-pattern=/home/pi/instaloader/nossport --post-filter="date_utc >= ${DATUM}" nossport --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
+instaloader --dirname-pattern=/home/pi/instaloader/nosst --post-filter="date_utc >= ${DATUM}" nosstories --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
+instaloader --dirname-pattern=/home/pi/instaloader/nossp --post-filter="date_utc >= ${DATUM}" nossport --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
@@ -133,8 +133,8 @@ done)
 (cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOSST END
 #RENAMING TXT FILES NOSSP BEGIN
-(cd /home/pi/instaloader/nosst/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
-(cd /home/pi/instaloader/nosst/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nossp/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nossp/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
 #RENAMING TXT FILES NOSSP END
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
