@@ -86,8 +86,6 @@ while true; do
 instaloader --dirname-pattern=/home/pi/instaloader/nos --post-filter="date_utc >= ${DATUM}" nos --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
 instaloader --dirname-pattern=/home/pi/instaloader/nosst --post-filter="date_utc >= ${DATUM}" nosstories --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
 instaloader --dirname-pattern=/home/pi/instaloader/nossp --post-filter="date_utc >= ${DATUM}" nossport --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nosst/mp4
@@ -139,11 +137,13 @@ done)
 mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
 mv /home/pi/instaloader/nossp/jpg/*.txt /home/pi/instaloader/nossp/jpg/captions
+#VIDEO LOOP BEGIN-----------------------------------------------------------------------------------------------
+omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
+omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 #INSTALOADER VIDEO EN JPG NOSST AFSPELEN BEGIN
 (cd /home/pi/instaloader/nosst/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
 feh /home/pi/instaloader/nosst/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG NOSST AFSPELEN END
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 (cd /home/pi/Videos; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 (cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
@@ -152,28 +152,22 @@ omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 (cd /home/pi/instaloader/nossp/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
 feh /home/pi/instaloader/nossp/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG NOSSP AFSPELEN END
-(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 (cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 killall vlc
 (cd /home/pi/Downloads/films; omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1)))
 cvlc http://icecast.omroep.nl/radio2-bb-mp3&
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
+omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 #INSTALOADER VIDEO EN JPG NOS AFSPELEN BEGIN
 (cd /home/pi/instaloader/nos/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
 feh /home/pi/instaloader/nos/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG NOS AFSPELEN END
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
-omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 #omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Corona.mp4
 #omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Vacature.mp4
-
+omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
+#VIDEO LOOP END-----------------------------------------------------------------------------------------------------
 done
 #END LOOP
