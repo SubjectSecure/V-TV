@@ -4,7 +4,7 @@ sleep 20
 #sudo shutdown 17:00
 cvlc http://icecast.omroep.nl/radio2-bb-mp3&
 feh -F /home/pi/Downloads/loading.jpg&
-#EMPTY INSTALOADER DIRECTORY + MAKE NEW ONES
+#MAKE NEW INSTALOADER DIRECTORIES
 #rm -R /home/pi/instaloader
 mkdir /home/pi/instaloader
 mkdir /home/pi/instaloader/nos
@@ -13,11 +13,27 @@ mkdir /home/pi/instaloader/nos/jpg
 mkdir /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
-#for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done
-mv /home/pi/instaloader/nos/*.txt /home/pi/instaloader/nos/jpg/captions
+mv /home/pi/instaloader/nos/*.txt /home/pi/instaloader/nos/jpg
+#FOR EVERY JPG A TXT BEGIN
+(cd /home/pi/instaloader/nos/jpg ; for f in *.jpg; do
+FILENAMEwoEXT="${f%%.*}"
+echo "${FILENAMEwoEXT}"
+echo "hierna file::-2"
+echo "${FILENAMEwoEXT::-2}"
+FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
+cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
+done)
+#FOR EVERY JPG A TXT END
+#RENAMING TXT FILES BEGIN
+(cd /home/pi/instaloader/nos/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nos/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+#RENAMING TXT FILES END
+mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
+#GENERATE DATE FOR INSTALOADER BEGIN
 python3 /home/pi/datumcheck.py > /home/pi/datum.txt
 DATUM=$(cat /home/pi/datum.txt)
 echo "${DATUM}"
+#GENERATE DATE FOR INSTALOADER END
 tickr&
 #BEGIN LOOP
 while true; do
@@ -29,34 +45,39 @@ omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
-#for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done
-mv /home/pi/instaloader/nos/*.txt /home/pi/instaloader/nos/jpg/captions
+(cd /home/pi/instaloader/nos/jpg ; for f in *.jpg; do
+FILENAMEwoEXT="${f%%.*}"
+echo "${FILENAMEwoEXT}"
+echo "hierna file::-2"
+echo "${FILENAMEwoEXT::-2}"
+FILENAMEwoEXTwoNUMBER="${FILENAMEwoEXT::-2}"
+cp -- "${FILENAMEwoEXTwoNUMBER}.txt" "${FILENAMEwoEXT%}.txt"
+done)
+(cd /home/pi/instaloader/nos/jpg/; for f in *UTC.txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+(cd /home/pi/instaloader/nos/jpg/; for f in *_[1-9].txt; do mv -- "$f" "${f%.txt}.jpg.txt"; done)
+mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 #INSTALOADER VIDEO EN JPG AFSPELEN BEGIN
-#for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done
-#feh /home/pi/instaloader/nos/jpg -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
+(cd /home/pi/instaloader/nos/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
+feh /home/pi/instaloader/nos/jpg -F -D 30 --font yudit/24 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG AFSPELEN END
-#cd /home/pi/Videos
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1))
-#cd /home/pi/Documents/Fotoserie
+(cd /home/pi/Videos; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Videos | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 killall vlc
-cd /home/pi/Downloads/films
-omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1))
+(cd /home/pi/Downloads/films; omxplayer --vol 2500 --win "0 0 1930 1020" -o hdmi $(echo $(ls /home/pi/Downloads/films | shuf -n 1)))
 cvlc http://icecast.omroep.nl/radio2-bb-mp3&
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-#cd /home/pi/Documents/Fotoserie
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
-omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1))
+(cd /home/pi/Documents/Fotoserie; omxplayer -o hdmi --win "0 0 1930 1020" $(echo $(ls /home/pi/Documents/Fotoserie | shuf -n 1)))
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 #omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Corona.mp4
