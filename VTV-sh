@@ -1,7 +1,7 @@
 echo "20 seconds ctrl + c to abort" 
 echo "Shutdown at 17:00"
 sleep 20
-#sudo shutdown 17:00
+sudo shutdown 17:00
 cvlc http://icecast.omroep.nl/radio2-bb-mp3&
 feh -F /home/pi/Downloads/loading.jpg&
 #MAKE NEW INSTALOADER DIRECTORIES
