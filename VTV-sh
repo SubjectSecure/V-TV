@@ -88,10 +88,10 @@ instaloader --dirname-pattern=/home/pi/instaloader/nosst --post-filter="date_utc
 instaloader --dirname-pattern=/home/pi/instaloader/nossp --post-filter="date_utc >= ${DATUM}" nossport --no-profile-pic --no-video-thumbnails --no-metadata-json --latest-stamps --login 2525squirrel1 --password Testes123123--
 mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nos/mp4
 mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nos/jpg
-mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nosst/mp4
-mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nosst/jpg
-mv /home/pi/instaloader/nos/*.mp4 /home/pi/instaloader/nossp/mp4
-mv /home/pi/instaloader/nos/*.jpg /home/pi/instaloader/nossp/jpg
+mv /home/pi/instaloader/nosst/*.mp4 /home/pi/instaloader/nosst/mp4
+mv /home/pi/instaloader/nosst/*.jpg /home/pi/instaloader/nosst/jpg
+mv /home/pi/instaloader/nossp/*.mp4 /home/pi/instaloader/nossp/mp4
+mv /home/pi/instaloader/nossp/*.jpg /home/pi/instaloader/nossp/jpg
 #FOR EVERY JPG A TXT NOS BEGIN
 (cd /home/pi/instaloader/nos/jpg ; for f in *.jpg; do
 FILENAMEwoEXT="${f%%.*}"
