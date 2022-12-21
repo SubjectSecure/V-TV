@@ -164,7 +164,7 @@ omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 (cd /home/pi/instaloader/nos/mp4; for a in *; do omxplayer -o local --win "0 0 1930 1020" "$a"; done)
 feh /home/pi/instaloader/nos/jpg -F -D 15 --font yudit/28 --draw-tinted --on-last-slide=quit --caption-path captions
 #INSTALOADER VIDEO EN JPG NOS AFSPELEN END
-#omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
+omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Feestdagen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Corona.mp4
 #omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/Vacature.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/oudefotos.mp4
