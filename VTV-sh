@@ -138,6 +138,7 @@ mv /home/pi/instaloader/nos/jpg/*.txt /home/pi/instaloader/nos/jpg/captions
 mv /home/pi/instaloader/nosst/jpg/*.txt /home/pi/instaloader/nosst/jpg/captions
 mv /home/pi/instaloader/nossp/jpg/*.txt /home/pi/instaloader/nossp/jpg/captions
 #VIDEO LOOP BEGIN-----------------------------------------------------------------------------------------------
+weget https://feeds.nos.nl/nosnieuwsalgemeen -O /home/pi/tickr
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/mededelingen.mp4
 omxplayer -o hdmi --win "0 0 1930 1020" /home/pi/Documents/reclame.mp4
 #INSTALOADER VIDEO EN JPG NOSST AFSPELEN BEGIN
