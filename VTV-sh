@@ -78,7 +78,7 @@ python3 /home/pi/datumcheck.py > /home/pi/datum.txt
 DATUM=$(cat /home/pi/datum.txt)
 echo "${DATUM}"
 #GENERATE DATE FOR INSTALOADER END
-tickr&
+#tickr&
 #BEGIN LOOP
 while true; do
 #cd /home/pi/instaloader
